@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Routes & Architecture</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>API Routes & Architecture</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="deno.html">Deno</a></li>
+        <li><a href="orm.html">ORM Integration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="api-section">
+    <div class="container">
+      <h2>API Routes in Deno with Express</h2>
+      <p>This project uses Express.js for API route management within the Deno environment. With the new npm compatibility in Deno 2, we can easily integrate Express to manage HTTP requests and API routing.</p>
+
+      <h3>API Route Example: Fetching Users</h3>
+      <pre><code>
+import express from 'npm:express';
+const app = express();
+
+// Simple GET route
+app.get('/api/users', (req, res) => {
+  res.json({ message: "Fetching all users" });
+});
+
+// Start the server
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
+      </code></pre>
+
+      <h3>API Design</h3>
+      <p>We use RESTful design principles for all API routes, ensuring predictable and consistent URLs for fetching, creating, updating, and deleting resources (CRUD).</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Deno Project. All rights reserved.</p>
+  </footer>
+</body>
+</html>

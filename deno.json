@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "start": "deno run --allow-net --allow-read main.js",
+    "dev": "deno run --watch --allow-net --allow-read main.js"
+  },
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "lib": ["deno.ns", "deno.unstable"],
+    "strict": true
+  },
+  "importMap": "./import_map.json"
+}

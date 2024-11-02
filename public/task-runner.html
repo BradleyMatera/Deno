@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Runner & Project Structure</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Task Runner & Project Structure</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="deno.html">Deno</a></li>
+        <li><a href="orm.html">ORM Integration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="task-runner-section">
+    <div class="container">
+      <h2>Deno's Task Runner</h2>
+      <p>In this project, we use Deno's built-in task runner to manage development workflows. It allows us to easily run commands like starting the server, watching for file changes, and running tests.</p>
+
+      <h3>Task Configuration</h3>
+      <pre><code class="language-json">
+{
+  "tasks": {
+    "start": "deno run --allow-net --allow-read main.js",
+    "dev": "deno run --watch --allow-net --allow-read main.js",
+    "test": "deno test --allow-net"
+  }
+}
+      </code></pre>
+
+      <h3>Project Structure</h3>
+      <pre><code>
+.
+├── public/          # Static files like HTML, CSS
+├── models/          # Database models
+├── main.js          # Entry point of the server
+├── test.js          # Tests
+├── deps.js          # Dependencies (e.g., Express, MongoDB)
+├── deno.json        # Task runner configuration
+├── import_map.json  # Module resolution for dependencies
+      </code></pre>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Deno Project. All rights reserved.</p>
+  </footer>
+</body>
+</html>

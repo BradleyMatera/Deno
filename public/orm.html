@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Queries with MongoDB & Dex ORM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Database Queries (MongoDB & Dex ORM)</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="deno.html">Deno</a></li>
+        <li><a href="frontend.html">Frontend</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="database-queries-section">
+    <div class="container">
+      <h2>Using MongoDB & Dex ORM</h2>
+      <p>This project integrates MongoDB for data storage, and Dex ORM simplifies query building for MongoDB in Deno.</p>
+
+      <h3>Connecting to MongoDB</h3>
+      <pre><code>
+import { MongoClient } from 'https://deno.land/x/mongo/mod.ts';
+
+const client = new MongoClient();
+await client.connect('mongodb://localhost:27017');
+
+// Define the database and collection
+const db = client.database('deno_app');
+const users = db.collection('users');
+      </code></pre>
+
+      <h3>CRUD Operations Using Dex ORM</h3>
+      <pre><code>
+// Inserting a user
+await users.insertOne({
+  name: "John Doe",
+  email: "john@example.com"
+});
+
+// Fetching users
+const allUsers = await users.find({});
+console.log(allUsers);
+      </code></pre>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Deno Project. All rights reserved.</p>
+  </footer>
+</body>
+</html>

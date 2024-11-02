@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Runner & Project Structure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Task Runner & Project Structure</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mongodb.html">MongoDB & Dex ORM</a></li>
+                <li><a href="deno.html">Deno</a></li>
+                <li><a href="frontend.html">Frontend</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-structure-section">
+        <div class="container">
+            <h2>Project Structure</h2>
+            <p>This project is organized into a clean and modular structure that separates concerns, making it easy to maintain and scale. Below is an overview of the structure:</p>
+
+            <pre><code class="language-bash">
+.
+├── public/          # Contains static assets like HTML and CSS files
+├── models/          # Database models (e.g., User.js for MongoDB)
+├── main.js          # Main server file, starts the Deno server
+├── deps.js          # Dependency imports (e.g., Express, MongoDB, Dex ORM)
+├── test.js          # Contains test cases for API endpoints
+├── deno.json        # Task runner configuration
+├── deno.lock        # Lock file for dependencies
+├── import_map.json  # Import map for module resolution
+            </code></pre>
+
+            <h3>Task Runner</h3>
+            <p>Deno's built-in task runner makes it easy to manage development workflows. Here's the configuration for the tasks:</p>
+            
+            <pre><code class="language-json">
+{
+  "tasks": {
+    "start": "deno run --allow-net --allow-read main.js",
+    "dev": "deno run --watch --allow-net --allow-read main.js",
+    "test": "deno test --allow-net"
+  }
+}
+            </code></pre>
+
+            <p>With these tasks, you can easily start the server in production, run it in development mode with file watching, and run tests to ensure everything is working properly.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Deno Project Starter. All rights reserved.</p>
+    </footer>
+</body>
+</html>

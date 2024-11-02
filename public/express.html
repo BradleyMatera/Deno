@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Integration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Express Integration</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mongodb.html">MongoDB & Dex ORM</a></li>
+                <li><a href="deno.html">Deno</a></li>
+                <li><a href="express.html">Express</a></li>
+                <li><a href="frontend.html">Frontend</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="express-section">
+        <div class="container">
+            <h2>Using Express with Deno</h2>
+            <p><strong>Express</strong> is a minimalist web framework for Node.js, widely used for building web applications and APIs. In Deno v2, we can now seamlessly integrate Express using the npm module system.</p>
+
+            <div class="example-section">
+                <h3>Key Features of Express</h3>
+                <ul>
+                    <li>Minimalist framework for building robust APIs and web applications</li>
+                    <li>Middleware support for handling HTTP requests</li>
+                    <li>Flexible routing system</li>
+                    <li>Extensive plugin and package support through npm</li>
+                </ul>
+            </div>
+
+            <div class="example-section">
+                <h3>Example: Setting up an Express Server in Deno</h3>
+                <pre><code>import express from "npm:express";
+
+// Create a new Express application
+const app = express();
+
+// Define a simple route
+app.get("/", (req, res) => {
+    res.send("Hello from Express and Deno!");
+});
+
+// Start the server
+app.listen(3000, () => {
+    console.log("Express server running on port 3000");
+});
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Deno Project Starter. All rights reserved.</p>
+    </footer>
+</body>
+</html>

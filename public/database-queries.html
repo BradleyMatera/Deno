@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Queries with Dex ORM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Database Queries (MongoDB & Dex ORM)</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mongodb.html">MongoDB & Dex ORM</a></li>
+                <li><a href="deno.html">Deno</a></li>
+                <li><a href="frontend.html">Frontend</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="database-queries-section">
+        <div class="container">
+            <h2>MongoDB & Dex ORM Integration</h2>
+            <p>In this project, MongoDB is used as the database, and Dex ORM is responsible for managing the queries. This ensures efficient database operations with clean and maintainable code.</p>
+
+            <div class="example-section">
+                <h3>Connecting to MongoDB</h3>
+                <pre><code class="language-js">
+// Import the Dex ORM and MongoDB libraries
+import { Dex } from "https://deno.land/x/dex/mod.ts";
+import { MongoClient } from "https://deno.land/x/mongo/mod.ts";
+
+// Set up the MongoDB connection
+const client = new MongoClient();
+client.connect("mongodb://localhost:27017");
+
+// Define the Dex ORM query builder for MongoDB
+const dex = Dex({ client: "mongodb" });
+                </code></pre>
+
+                <h3>Basic CRUD Operations with Dex ORM</h3>
+                <p>Dex ORM allows us to write simple and maintainable SQL-like queries for MongoDB. Here are a few examples:</p>
+
+                <pre><code class="language-js">
+// Insert a new user
+await dex.table("users").insert({
+  name: "John Doe",
+  email: "john@example.com",
+});
+
+// Fetch all users
+const users = await dex.table("users").select();
+
+// Update a user
+await dex.table("users").where("id", 1).update({ name: "Jane Doe" });
+
+// Delete a user
+await dex.table("users").where("id", 1).del();
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Deno Project Starter. All rights reserved.</p>
+    </footer>
+</body>
+</html>

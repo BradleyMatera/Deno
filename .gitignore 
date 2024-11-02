@@ -1,0 +1,9 @@
+# Ignore Deno cache files
+/.deno/
+/deno.lock
+
+# Ignore editor and environment-specific files
+.vscode/
+*.log
+node_modules/
+.DS_Store

@@ -1,0 +1,201 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--chili-pepper);
+    /* Background using Chili Pepper */
+    color: var(--cyan);
+    /* Text color using Cyan */
+}
+
+/* Colors */
+:root {
+    --cyan: #2ff3e0;
+    --gold: #f8d210;
+    --pink: #fa26a0;
+    --chili-pepper: #a4243b;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--chili-pepper);
+    /* Chili Pepper for the header background */
+    color: var(--cyan);
+    /* Cyan text color in header */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--cyan);
+    /* Navigation link color using Cyan */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-color: var(--gold);
+    /* Gold background for hero section */
+    color: var(--chili-pepper);
+    /* Text color using Chili Pepper */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: var(--pink);
+    /* Button background color using Pink */
+    color: var(--chili-pepper);
+    /* Button text color using Chili Pepper */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background-color: var(--cyan);
+    /* Button hover effect using Cyan */
+}
+
+/* Features Section */
+.features {
+    padding: 50px;
+    background-color: var(--cyan);
+    /* Lighter Cyan for background */
+    color: var(--chili-pepper);
+    /* Text color using Chili Pepper */
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.feature-item {
+    margin: 20px;
+}
+
+.feature-item h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--pink);
+    /* Footer background color using Pink */
+    color: var(--chili-pepper);
+    /* Footer text color using Chili Pepper */
+    text-align: center;
+    padding: 10px;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px;
+    background-color: var(--chili-pepper);
+    /* Chili Pepper background */
+    color: var(--cyan);
+    /* Cyan text color */
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* ORM Section */
+.orm-section {
+    padding: 50px;
+    background-color: var(--gold);
+    /* Gold for ORM section */
+    color: var(--chili-pepper);
+    /* Text color using Chili Pepper */
+    text-align: left;
+}
+
+.orm-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.example-section {
+    margin: 30px 0;
+}
+
+.example-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+pre {
+    background-color: var(--chili-pepper);
+    /* Preformatted block background */
+    color: var(--cyan);
+    /* Preformatted text color using Cyan */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+pre code {
+    font-size: 16px;
+}

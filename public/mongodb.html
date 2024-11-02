@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB & Dex ORM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MongoDB & Dex ORM</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mongodb.html">MongoDB & Dex ORM</a></li>
+                <li><a href="deno.html">Deno</a></li>
+                <li><a href="express.html">Express</a></li>
+                <li><a href="frontend.html">Frontend</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="mongodb-section">
+        <div class="container">
+            <h2>Using MongoDB with Dex ORM in Deno</h2>
+            <p><strong>MongoDB</strong> is a NoSQL database that provides high performance, high availability, and easy scalability. In our project, we integrated MongoDB using <strong>Dex ORM</strong>, a Deno-friendly ORM that simplifies CRUD operations for MongoDB databases.</p>
+
+            <div class="example-section">
+                <h3>Key Features of MongoDB</h3>
+                <ul>
+                    <li>Flexible schema design: store data as JSON-like documents</li>
+                    <li>Scales horizontally for large amounts of data</li>
+                    <li>Supports rich queries, indexing, and aggregation</li>
+                    <li>Ideal for modern web applications and microservices</li>
+                </ul>
+            </div>
+
+            <div class="example-section">
+                <h3>Why Dex ORM?</h3>
+                <p>We chose Dex ORM for this project because it provides a simple, consistent interface to MongoDB, allowing us to manage models, run queries, and handle data easily in Deno applications.</p>
+
+                <p>Example: Inserting a new document into a MongoDB collection using Dex ORM:</p>
+                <pre><code>import { Database, MongoDBConnector } from "https://deno.land/x/dex/mod.ts";
+
+// Connect to MongoDB
+const connector = new MongoDBConnector({
+  uri: "mongodb://localhost:27017",
+  database: "deno_project",
+});
+const db = new Database(connector);
+
+// Use Dex ORM to interact with the database
+const users = db.collection("users");
+
+// Insert a new user
+const insertId = await users.insertOne({
+  name: "John Doe",
+  email: "johndoe@example.com",
+  age: 29,
+});
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Deno Project Starter. All rights reserved.</p>
+    </footer>
+</body>
+</html>
